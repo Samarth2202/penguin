@@ -63,10 +63,10 @@ def prediction(model, island, bill_length_mm, bill_depth_mm, flipper_length_mm, 
 
 # Design the App
 st.title('Prediction of Penguin Species')
-bill_len = st.sidebar.slider('Bill Length mm',df['bill_length_mm'].min(),df['bill_length_mm'].max())
-bill_depth = st.sidebar.slider('Bill Depth mm',df['bill_depth_mm'].min(),df['bill_depth_mm'].max())
-flip_len = st.sidebar.slider('Flipper Length mm',df['flipper_length_mm'].min(),df['flipper_length_mm'].max())
-body_mass = st.sidebar.slider('Body Mass g',df['body_mass_g'].min(),df['body_mass_g'].max())
+bill_len = st.sidebar.slider('Bill Length mm',float(df['bill_length_mm'].min()),float(df['bill_length_mm'].max()))
+bill_depth = st.sidebar.slider('Bill Depth mm',float(df['bill_depth_mm'].min()),float(df['bill_depth_mm'].max()))
+flip_len = st.sidebar.slider('Flipper Length mm',float(df['flipper_length_mm'].min()),float(df['flipper_length_mm'].max()))
+body_mass = st.sidebar.slider('Body Mass g',float(df['body_mass_g'].min()),float(df['body_mass_g'].max()))
 
 gender = st.sidebar.selectbox('Gender of Penguin : ',('Male', 'Female'))
 if gender == 'Male':
